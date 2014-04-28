@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tryton>
+    <data>
+
+        <record model="res.group" id="group_project_component_admin">
+            <field name="name">Project Component Administration</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_project_component_admin">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_project_component_admin"/>
+        </record>
+        <record model="res.user-res.group" id="user_trigger_group_project_component_admin">
+            <field name="user" ref="res.user_trigger"/>
+            <field name="group" ref="group_project_component_admin"/>
+        </record>
+        <record model="res.group" id="group_project_component">
+            <field name="name">Project Component</field>
+        </record>
+        <record model="res.user-res.group" id="user_admin_group_project_component">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_project_component"/>
+        </record>
+        <record model="res.user-res.group" id="user_trigger_group_project_component">
+            <field name="user" ref="res.user_trigger"/>
+            <field name="group" ref="group_project_component"/>
+        </record>
+        <record model="ir.ui.view" id="project_work_component_view_form">
+            <field name="model">project.work.component</field>
+            <field name="type">form</field>
+            <field name="name">project_work_component_form</field>
+        </record>
+        <record model="ir.ui.view" id="project_work_component_view_list">
+            <field name="model">project.work.component</field>
+            <field name="type">tree</field>
+            <field name="name">project_work_component_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_project_work_component">
+            <field name="name">Project Component</field>
+            <field name="res_model">project.work.component</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_project_work_component_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="project_work_component_view_list"/>
+            <field name="act_window" ref="act_project_work_component"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_project_work_component_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="project_work_component_view_form"/>
+            <field name="act_window" ref="act_project_work_component"/>
+        </record>
+        <record model="ir.model.access" id="access_project_work_component">
+            <field name="model" search="[('model', '=', 'project.work.component')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_project_work_component_admin">
+            <field name="model" search="[('model', '=', 'project.work.component')]"/>
+            <field name="group" ref="group_project_component_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="project_work_component_category_view_form">
+            <field name="model">project.work.component_category</field>
+            <field name="type">form</field>
+            <field name="name">project_work_component_category_form</field>
+        </record>
+        <record model="ir.ui.view" id="project_work_component_category_view_list">
+            <field name="model">project.work.component_category</field>
+            <field name="type">tree</field>
+            <field name="name">project_work_component_category_list</field>
+        </record>
+        <record model="ir.action.act_window" id="act_project_work_component_category">
+            <field name="name">Project Component Category</field>
+            <field name="res_model">project.work.component_category</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_project_work_component_category_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="project_work_component_category_view_list"/>
+            <field name="act_window" ref="act_project_work_component_category"/>
+        </record>
+        <record model="ir.action.act_window.view" id="act_project_work_component_category_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="project_work_component_category_view_form"/>
+            <field name="act_window" ref="act_project_work_component_category"/>
+        </record>
+        <record model="ir.model.access" id="access_project_work_component_category">
+            <field name="model" search="[('model', '=', 'project.work.component_category')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_project_work_component_category_admin">
+            <field name="model" search="[('model', '=', 'project.work.component_category')]"/>
+            <field name="group" ref="group_project_component_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.ui.view" id="project_work_view_form">
+            <field name="model">project.work</field>
+            <field name="type">form</field>
+            <field name="inherit" ref="project.work_view_form"/>
+            <field name="name">project_work_form</field>
+        </record>
+        <record model="ir.ui.view" id="project_work_view_list">
+            <field name="model">project.work</field>
+            <field name="type">tree</field>
+            <field name="inherit" ref="project.work_view_list"/>
+            <field name="name">project_work_list</field>
+        </record>
+        <!-- Menus -->
+        <menuitem id="menu_project_component" name="Project Component"  parent="project.menu_configuration" sequence="1" />
+
+          <record model="ir.ui.menu-res.group" id="menu_project_component_group_project_component">
+            <field name="menu" ref="menu_project_component"/>
+            <field name="group" ref="group_project_component"/>
+          </record>
+          
+          <record model="ir.ui.menu-res.group" id="menu_project_component_group_project_component_admin">
+            <field name="menu" ref="menu_project_component"/>
+            <field name="group" ref="group_project_component"/>
+          </record>
+    
+        <menuitem action="act_project_work_component" id="menu_project_work_component" parent="menu_project_component" sequence="1" name="Component"/>
+        <menuitem action="act_project_work_component_category" id="menu_project_work_component_category" parent="menu_project_component" sequence="1" name="Component Category"/>
+    </data>
+</tryton>

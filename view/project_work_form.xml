@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<data>
+<!-- TODO fill "xpath expr" -->                
+    <xpath expr="/form/notebook" position="after">
+        <page name="components">
+            <label name="component_categories"/>
+            <field name="component_categories"/>
+            <label name="components"/>
+            <field name="components"/>
+        </page>
+    </xpath>
+</data>
