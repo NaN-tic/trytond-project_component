@@ -22,10 +22,11 @@ class ProjectComponent(ModelSQL, ModelView):
     __name__ = 'project.work.component'
 
     name = fields.Char('Name', required=True, select=True)
+    owner = fields.Char('Owner', select=True)
     url = fields.Char('Url')
     module = fields.Many2One('ir.module.module', 'Module')
     category = fields.Many2One('project.work.component_category', 'Category',
-        required=True, select=True)
+        required=False, select=True)
     comment = fields.Text('comment')
 
 
