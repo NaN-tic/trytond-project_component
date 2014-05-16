@@ -37,7 +37,6 @@ class Work:
         'project.work-project.work_component_category', 'work',
         'component_category', 'Component Category',
         states={
-                 #'required': Eval('type') == 'task',
                  'invisible': Eval('type') != 'task',
                 }, depends=['type'])
 
@@ -45,7 +44,6 @@ class Work:
         'project.work-project.work_component', 'work',
         'component', 'Components',
         states={
-                 #'required': Eval('type') == 'task',
                  'invisible': Eval('type') != 'task',
                 }, depends=['type'])
 
