@@ -12,5 +12,4 @@
     <field name="url"/>
     <separator  name="comment" colspan="4"/>
     <field name="comment" colspan="4"/>
-    
 </form>
