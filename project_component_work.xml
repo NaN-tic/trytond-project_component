@@ -114,6 +114,18 @@
             <field name="inherit" ref="project.work_view_list"/>
             <field name="name">project_work_list</field>
         </record>
+        <!-- Relates -->
+        <record model="ir.action.act_window" id="act_work_from_component">
+             <field name="name">Tasks</field>
+             <field name="res_model">project.work</field>
+             <field name="domain">[('components', 'in', [Eval('active_id')])]</field>
+         </record>
+         <record model="ir.action.keyword" id="act_open_works_from_component">
+             <field name="keyword">form_relate</field>
+             <field name="model">project.work.component,-1</field>
+             <field name="action" ref="act_work_from_component"/>
+        </record>
+
         <!-- Menus -->
         <menuitem id="menu_project_component" name="Project Component"  parent="project.menu_configuration" sequence="1" />
 
@@ -121,12 +133,12 @@
             <field name="menu" ref="menu_project_component"/>
             <field name="group" ref="group_project_component"/>
           </record>
-          
+
           <record model="ir.ui.menu-res.group" id="menu_project_component_group_project_component_admin">
             <field name="menu" ref="menu_project_component"/>
             <field name="group" ref="group_project_component"/>
           </record>
-    
+
         <menuitem action="act_project_work_component" id="menu_project_work_component" parent="menu_project_component" sequence="1" name="Component"/>
         <menuitem action="act_project_work_component_category" id="menu_project_work_component_category" parent="menu_project_component" sequence="1" name="Component Category"/>
     </data>
