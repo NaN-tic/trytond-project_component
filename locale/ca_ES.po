@@ -1,0 +1,208 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:project.work,component_categories:"
+msgid "Component Category"
+msgstr ""
+
+msgctxt "field:project.work,components:"
+msgid "Components"
+msgstr "Components"
+
+msgctxt "field:project.work-project.work_component,component:"
+msgid "Component"
+msgstr "Component"
+
+msgctxt "field:project.work-project.work_component,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:project.work-project.work_component,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:project.work-project.work_component,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:project.work-project.work_component,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:project.work-project.work_component,work:"
+msgid "Work"
+msgstr "Treball"
+
+msgctxt "field:project.work-project.work_component,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:project.work-project.work_component,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt ""
+"field:project.work-project.work_component_category,component_category:"
+msgid "Category Component"
+msgstr ""
+
+msgctxt "field:project.work-project.work_component_category,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:project.work-project.work_component_category,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:project.work-project.work_component_category,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:project.work-project.work_component_category,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:project.work-project.work_component_category,work:"
+msgid "Work"
+msgstr "Treball"
+
+msgctxt "field:project.work-project.work_component_category,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:project.work-project.work_component_category,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:project.work.component,category:"
+msgid "Category"
+msgstr "Categoria"
+
+msgctxt "field:project.work.component,comment:"
+msgid "comment"
+msgstr "comentari"
+
+msgctxt "field:project.work.component,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:project.work.component,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:project.work.component,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:project.work.component,module:"
+msgid "Module"
+msgstr "Mòdul"
+
+msgctxt "field:project.work.component,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:project.work.component,owner:"
+msgid "Owner"
+msgstr "Titular"
+
+msgctxt "field:project.work.component,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:project.work.component,url:"
+msgid "Url"
+msgstr "URL"
+
+msgctxt "field:project.work.component,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:project.work.component,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "field:project.work.component_category,create_date:"
+msgid "Create Date"
+msgstr "Data creació"
+
+msgctxt "field:project.work.component_category,create_uid:"
+msgid "Create User"
+msgstr "Usuari creació"
+
+msgctxt "field:project.work.component_category,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:project.work.component_category,name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:project.work.component_category,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:project.work.component_category,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:project.work.component_category,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "model:ir.action,name:act_project_work_component"
+msgid "Project Component"
+msgstr "Components"
+
+msgctxt "model:ir.action,name:act_project_work_component_category"
+msgid "Project Component Category"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_work_from_component"
+msgid "Tasks"
+msgstr "Tasques"
+
+msgctxt "model:ir.ui.menu,name:menu_project_component"
+msgid "Project Component"
+msgstr "Components"
+
+msgctxt "model:ir.ui.menu,name:menu_project_work_component"
+msgid "Component"
+msgstr "Component"
+
+msgctxt "model:ir.ui.menu,name:menu_project_work_component_category"
+msgid "Component Category"
+msgstr ""
+
+msgctxt "model:project.work-project.work_component,name:"
+msgid "Project Work - Component"
+msgstr ""
+
+msgctxt "model:project.work-project.work_component_category,name:"
+msgid "Project Work - Component Category"
+msgstr ""
+
+msgctxt "model:project.work.component,name:"
+msgid "Project Component"
+msgstr "Component"
+
+msgctxt "model:project.work.component_category,name:"
+msgid "Project Component Category"
+msgstr ""
+
+msgctxt "model:res.group,name:group_project_component"
+msgid "Project Component"
+msgstr "Components"
+
+msgctxt "model:res.group,name:group_project_component_admin"
+msgid "Project Component Administration"
+msgstr ""
+
+msgctxt "view:project.work.component:"
+msgid "Project Component"
+msgstr "Components projecte"
+
+msgctxt "view:project.work.component_category:"
+msgid "Project Component Category"
+msgstr ""
