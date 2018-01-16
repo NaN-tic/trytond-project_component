@@ -10,6 +10,8 @@
     <field name="module" />
     <label name="url"/>
     <field name="url"/>
+    <label name="active"/>
+    <field name="active"/>
     <separator  name="comment" colspan="4"/>
     <field name="comment" colspan="4"/>
 </form>

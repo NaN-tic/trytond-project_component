@@ -28,6 +28,11 @@ class ProjectComponent(ModelSQL, ModelView):
     category = fields.Many2One('project.work.component_category', 'Category',
         required=False, select=True)
     comment = fields.Text('comment')
+    active = fields.Boolean('Active')
+
+    @staticmethod
+    def default_active():
+        return True
 
 
 class Work:
