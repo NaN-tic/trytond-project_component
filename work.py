@@ -3,11 +3,11 @@
 
 from trytond.model import ModelView, ModelSQL, fields
 from trytond.pool import PoolMeta
-from trytond.pyson import Eval, And
+from trytond.pyson import Eval
 
 __all__ = ['ProjectComponent', 'ProjectComponentCategory',
     'ProjectWorkComponentCategory', 'ProjectWorkComponent', 'Work']
-__metaclass__ = PoolMeta
+
 
 
 class ProjectComponentCategory(ModelSQL, ModelView):
@@ -32,7 +32,8 @@ class ProjectComponent(ModelSQL, ModelView):
 
 class Work:
     __name__ = 'project.work'
-
+    __metaclass__ = PoolMeta
+    
     component_categories = fields.Many2Many(
         'project.work-project.work_component_category', 'work',
         'component_category', 'Component Category',
