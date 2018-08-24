@@ -30,9 +30,8 @@ class ProjectComponent(ModelSQL, ModelView):
     comment = fields.Text('comment')
 
 
-class Work:
+class Work(metaclass=PoolMeta):
     __name__ = 'project.work'
-    __metaclass__ = PoolMeta
     
     component_categories = fields.Many2Many(
         'project.work-project.work_component_category', 'work',
