@@ -10,19 +10,11 @@
             <field name="user" ref="res.user_admin"/>
             <field name="group" ref="group_project_component_admin"/>
         </record>
-        <record model="res.user-res.group" id="user_trigger_group_project_component_admin">
-            <field name="user" ref="res.user_trigger"/>
-            <field name="group" ref="group_project_component_admin"/>
-        </record>
         <record model="res.group" id="group_project_component">
             <field name="name">Project Component</field>
         </record>
         <record model="res.user-res.group" id="user_admin_group_project_component">
             <field name="user" ref="res.user_admin"/>
-            <field name="group" ref="group_project_component"/>
-        </record>
-        <record model="res.user-res.group" id="user_trigger_group_project_component">
-            <field name="user" ref="res.user_trigger"/>
             <field name="group" ref="group_project_component"/>
         </record>
         <record model="ir.ui.view" id="project_work_component_view_form">
