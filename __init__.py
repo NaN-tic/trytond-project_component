@@ -6,9 +6,11 @@ from . import work
 
 def register():
     Pool.register(
-        work.ProjectComponentCategory,
-        work.ProjectComponent,
-        work.ProjectWorkComponentCategory,
-        work.ProjectWorkComponent,
+        work.Version,
+        work.Feature,
+        work.ComponentCategory,
+        work.Component,
+        work.WorkComponentCategory,
+        work.WorkComponent,
         work.Work,
         module='project_component', type_='model')
