@@ -5,19 +5,35 @@ from trytond.model import ModelView, ModelSQL, fields
 from trytond.pool import PoolMeta
 from trytond.pyson import Eval
 
-__all__ = ['ProjectComponent', 'ProjectComponentCategory',
-    'ProjectWorkComponentCategory', 'ProjectWorkComponent', 'Work']
+__all__ = ['Version', 'Component', 'ComponentCategory',
+    'WorkComponentCategory', 'WorkComponent', 'Work']
 
 
+class Version(ModelSQL, ModelView):
+    'Project Component Version'
+    __name__  = 'project.work.component.version'
+    name = fields.Char('Name', required=True)
+    release_date = fields.Date('Release Date')
+    deprecation_date = fields.Date('Deprecation Date')
 
-class ProjectComponentCategory(ModelSQL, ModelView):
+
+class Feature(ModelSQL, ModelView):
+    'Project Component Feature'
+    __name__ = 'project.work.component.feature'
+    version = fields.Many2One('project.work.component.version', 'Version', required=True)
+    component = fields.Many2One('project.work.component', 'Component', required=True)
+    name = fields.Char('Name', required=True)
+    description = fields.Text('Description')
+
+
+class ComponentCategory(ModelSQL, ModelView):
     'Project Component Category'
     __name__ = 'project.work.component_category'
 
     name = fields.Char('Name', required=True, select=True)
 
 
-class ProjectComponent(ModelSQL, ModelView):
+class Component(ModelSQL, ModelView):
     'Project Component'
     __name__ = 'project.work.component'
 
@@ -32,7 +48,6 @@ class ProjectComponent(ModelSQL, ModelView):
 
 class Work(metaclass=PoolMeta):
     __name__ = 'project.work'
-    
     component_categories = fields.Many2Many(
         'project.work-project.work_component_category', 'work',
         'component_category', 'Component Category',
@@ -48,7 +63,7 @@ class Work(metaclass=PoolMeta):
                 }, depends=['type'])
 
 
-class ProjectWorkComponentCategory(ModelSQL):
+class WorkComponentCategory(ModelSQL):
     'Project Work - Component Category'
     __name__ = 'project.work-project.work_component_category'
     _table = 'project_work_component_category_rel'
@@ -59,7 +74,7 @@ class ProjectWorkComponentCategory(ModelSQL):
             'Category Component', ondelete='RESTRICT', required=True)
 
 
-class ProjectWorkComponent(ModelSQL):
+class WorkComponent(ModelSQL):
     'Project Work - Component'
     __name__ = 'project.work-project.work_component'
     _table = 'project_work_component_rel'
