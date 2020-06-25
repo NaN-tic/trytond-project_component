@@ -2,8 +2,7 @@
 <!-- The COPYRIGHT file at the top level of this repository contains the full
      copyright notices and license terms. -->
 <data>
-<!-- TODO fill "xpath expr" -->
-    <xpath expr="/tree/field[@name='state']" position="after">
+    <xpath expr="/tree/field[@name='status']" position="after">
         <field name="component_categories"/>
         <field name="components"/>
     </xpath>
