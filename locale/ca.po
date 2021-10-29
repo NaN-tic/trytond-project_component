@@ -163,6 +163,10 @@ msgctxt "model:ir.action,name:act_work_from_component"
 msgid "Tasks"
 msgstr "Tasques"
 
+msgctxt "model:ir.message,text:msg_name_unique"
+msgid "The name of the component must be unique."
+msgstr "El nom del component ha de ser únic."
+
 msgctxt "model:ir.ui.menu,name:menu_project_component"
 msgid "Project Component"
 msgstr "Components"
