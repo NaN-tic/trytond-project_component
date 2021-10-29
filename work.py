@@ -1,7 +1,7 @@
 # This file is part of Tryton.  The COPYRIGHT file at the top level of
 # this repository contains the full copyright notices and license terms.
 
-from trytond.model import ModelView, ModelSQL, fields
+from trytond.model import ModelView, ModelSQL, fields, Unique
 from trytond.pool import PoolMeta
 from trytond.pyson import Eval
 
@@ -44,6 +44,23 @@ class Component(ModelSQL, ModelView):
     category = fields.Many2One('project.work.component_category', 'Category',
         required=False, select=True)
     comment = fields.Text('comment')
+
+    @classmethod
+    def __setup__(cls):
+        super(Component, cls).__setup__()
+        t = cls.__table__()
+        cls._sql_constraints += [
+            ('name_uniq', Unique(t, t.name), 'project_component.msg_name_unique')
+        ]
+
+    @classmethod
+    def copy(cls, components, default=None):
+        new_components = []
+        for component in components:
+            default['name'] = '%s-copy' % component.name
+            new_component, = super(Component, cls).copy([component], default=default)
+            new_components.append(new_component)
+        return new_components
 
 
 class Work(metaclass=PoolMeta):
