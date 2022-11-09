@@ -30,19 +30,19 @@ class ComponentCategory(ModelSQL, ModelView):
     'Project Component Category'
     __name__ = 'project.work.component_category'
 
-    name = fields.Char('Name', required=True, select=True)
+    name = fields.Char('Name', required=True)
 
 
 class Component(ModelSQL, ModelView):
     'Project Component'
     __name__ = 'project.work.component'
 
-    name = fields.Char('Name', required=True, select=True)
-    owner = fields.Char('Owner', select=True)
+    name = fields.Char('Name', required=True)
+    owner = fields.Char('Owner')
     url = fields.Char('Url')
     module = fields.Many2One('ir.module', 'Module')
     category = fields.Many2One('project.work.component_category', 'Category',
-        required=False, select=True)
+        required=False)
     comment = fields.Text('comment')
 
     @classmethod
@@ -86,7 +86,7 @@ class WorkComponentCategory(ModelSQL):
     _table = 'project_work_component_category_rel'
 
     work = fields.Many2One('project.work', 'Work',
-            ondelete='CASCADE', select=True, required=True)
+            ondelete='CASCADE', required=True)
     component_category = fields.Many2One('project.work.component_category',
             'Category Component', ondelete='RESTRICT', required=True)
 
@@ -97,6 +97,6 @@ class WorkComponent(ModelSQL):
     _table = 'project_work_component_rel'
 
     work = fields.Many2One('project.work', 'Work',
-            ondelete='CASCADE', select=True, required=True)
+            ondelete='CASCADE', required=True)
     component = fields.Many2One('project.work.component',
             'Component', ondelete='RESTRICT', required=True)
