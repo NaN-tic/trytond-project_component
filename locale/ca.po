@@ -95,10 +95,6 @@ msgctxt "field:project.work.component,id:"
 msgid "ID"
 msgstr "ID"
 
-msgctxt "field:project.work.component,module:"
-msgid "Module"
-msgstr "Mòdul"
-
 msgctxt "field:project.work.component,name:"
 msgid "Name"
 msgstr "Nom"

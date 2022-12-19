@@ -6,10 +6,8 @@
     <field name="name"/>
     <label name="category"/>
     <field name="category"/>
-    <label name="module" />
-    <field name="module" />
     <label name="url"/>
-    <field name="url"/>
+    <field name="url" colspan="3"/>
     <separator  name="comment" colspan="4"/>
     <field name="comment" colspan="4"/>
 </form>

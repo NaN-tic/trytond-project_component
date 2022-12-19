@@ -40,7 +40,6 @@ class Component(ModelSQL, ModelView):
     name = fields.Char('Name', required=True, select=True)
     owner = fields.Char('Owner', select=True)
     url = fields.Char('Url')
-    module = fields.Many2One('ir.module', 'Module')
     category = fields.Many2One('project.work.component_category', 'Category',
         required=False, select=True)
     comment = fields.Text('comment')
