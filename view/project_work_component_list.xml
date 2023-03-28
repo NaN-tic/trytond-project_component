@@ -4,5 +4,5 @@
 <tree>
     <field name="name" expand="2"/>
     <field name="category"/>
-    <field name="url"/>
+    <field name="url" widget="url" expand="1"/>
 </tree>
