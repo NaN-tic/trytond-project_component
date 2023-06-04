@@ -8,7 +8,10 @@
     <field name="category"/>
     <newline/>
     <label name="url"/>
-    <field name="url" colspan="3"/>
+    <group id="url" colspan="3" col="6">
+       <field name="url" colspan="5"/>
+       <field name="url" widget="url"/>
+    </group>
     <separator  name="comment" colspan="6"/>
     <field name="comment" colspan="6"/>
 </form>
