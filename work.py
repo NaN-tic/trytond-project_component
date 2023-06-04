@@ -1,7 +1,7 @@
 # This file is part of Tryton.  The COPYRIGHT file at the top level of
 # this repository contains the full copyright notices and license terms.
 
-from trytond.model import ModelView, ModelSQL, fields, Unique
+from trytond.model import ModelView, ModelSQL, fields, Unique, DeactivableMixin
 from trytond.pool import PoolMeta
 from trytond.pyson import Eval
 
@@ -33,7 +33,7 @@ class ComponentCategory(ModelSQL, ModelView):
     name = fields.Char('Name', required=True, select=True)
 
 
-class Component(ModelSQL, ModelView):
+class Component(DeactivableMixin, ModelSQL, ModelView):
     'Project Component'
     __name__ = 'project.work.component'
 
