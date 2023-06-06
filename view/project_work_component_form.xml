@@ -6,6 +6,10 @@
     <field name="name"/>
     <label name="category"/>
     <field name="category"/>
+    <group id="checkboxes" colspan="2" col="-1">
+        <label name="active"/>
+        <field name="active"/>
+    </group>
     <newline/>
     <label name="url"/>
     <group id="url" colspan="3" col="6">
