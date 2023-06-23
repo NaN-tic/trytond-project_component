@@ -13,6 +13,9 @@
     <newline/>
     <label name="url"/>
     <field name="url" widget="url" colspan="5"/>
-    <separator  name="comment" colspan="6"/>
-    <field name="comment" colspan="6"/>
+    <notebook>
+        <page name="comment">
+            <field name="comment" colspan="4"/>
+        </page>
+    </notebook>
 </form>
