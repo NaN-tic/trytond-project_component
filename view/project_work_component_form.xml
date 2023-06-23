@@ -12,10 +12,7 @@
     </group>
     <newline/>
     <label name="url"/>
-    <group id="url" colspan="3" col="6">
-       <field name="url" colspan="5"/>
-       <field name="url" widget="url"/>
-    </group>
+    <field name="url" widget="url" colspan="5"/>
     <separator  name="comment" colspan="6"/>
     <field name="comment" colspan="6"/>
 </form>
