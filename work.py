@@ -40,10 +40,10 @@ class Component(DeactivableMixin, ModelSQL, ModelView):
 
     name = fields.Char('Name', required=True)
     owner = fields.Char('Owner')
-    url = fields.Char('Url')
+    url = fields.Char('URL')
     category = fields.Many2One('project.work.component_category', 'Category',
         required=False)
-    comment = fields.Text('comment')
+    comment = fields.Text('Comment')
 
     @classmethod
     def __setup__(cls):
