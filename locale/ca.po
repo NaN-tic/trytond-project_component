@@ -1,10 +1,21 @@
 #
+# Albert Cervera i Areny <albert@nan-tic.com>, 2024.
 msgid ""
-msgstr "Content-Type: text/plain; charset=utf-8\n"
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Last-Translator: Albert Cervera i Areny <albert@nan-tic.com>\n"
+"PO-Revision-Date: 2024-03-31 12:15+0200\n"
+"Project-Id-Version: \n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca_ES\n"
+"Content-Transfer-Encoding: 8bit\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 msgctxt "field:project.work,component_categories:"
 msgid "Component Category"
-msgstr ""
+msgstr "Categoria de component"
 
 msgctxt "field:project.work,components:"
 msgid "Components"
@@ -14,86 +25,26 @@ msgctxt "field:project.work-project.work_component,component:"
 msgid "Component"
 msgstr "Component"
 
-msgctxt "field:project.work-project.work_component,create_date:"
-msgid "Create Date"
-msgstr "Data creació"
-
-msgctxt "field:project.work-project.work_component,create_uid:"
-msgid "Create User"
-msgstr "Usuari creació"
-
-msgctxt "field:project.work-project.work_component,id:"
-msgid "ID"
-msgstr "ID"
-
-msgctxt "field:project.work-project.work_component,rec_name:"
-msgid "Name"
-msgstr "Nom"
-
 msgctxt "field:project.work-project.work_component,work:"
 msgid "Work"
 msgstr "Treball"
 
-msgctxt "field:project.work-project.work_component,write_date:"
-msgid "Write Date"
-msgstr "Data modificació"
-
-msgctxt "field:project.work-project.work_component,write_uid:"
-msgid "Write User"
-msgstr "Usuari modificació"
-
 msgctxt ""
 "field:project.work-project.work_component_category,component_category:"
 msgid "Category Component"
-msgstr ""
-
-msgctxt "field:project.work-project.work_component_category,create_date:"
-msgid "Create Date"
-msgstr "Data creació"
-
-msgctxt "field:project.work-project.work_component_category,create_uid:"
-msgid "Create User"
-msgstr "Usuari creació"
-
-msgctxt "field:project.work-project.work_component_category,id:"
-msgid "ID"
-msgstr "ID"
-
-msgctxt "field:project.work-project.work_component_category,rec_name:"
-msgid "Name"
-msgstr "Nom"
+msgstr "Categoria de Component"
 
 msgctxt "field:project.work-project.work_component_category,work:"
 msgid "Work"
 msgstr "Treball"
-
-msgctxt "field:project.work-project.work_component_category,write_date:"
-msgid "Write Date"
-msgstr "Data modificació"
-
-msgctxt "field:project.work-project.work_component_category,write_uid:"
-msgid "Write User"
-msgstr "Usuari modificació"
 
 msgctxt "field:project.work.component,category:"
 msgid "Category"
 msgstr "Categoria"
 
 msgctxt "field:project.work.component,comment:"
-msgid "comment"
-msgstr "comentari"
-
-msgctxt "field:project.work.component,create_date:"
-msgid "Create Date"
-msgstr "Data creació"
-
-msgctxt "field:project.work.component,create_uid:"
-msgid "Create User"
-msgstr "Usuari creació"
-
-msgctxt "field:project.work.component,id:"
-msgid "ID"
-msgstr "ID"
+msgid "Comment"
+msgstr "Comentari"
 
 msgctxt "field:project.work.component,name:"
 msgid "Name"
@@ -103,49 +54,53 @@ msgctxt "field:project.work.component,owner:"
 msgid "Owner"
 msgstr "Titular"
 
-msgctxt "field:project.work.component,rec_name:"
+msgctxt "field:project.work.component,url:"
+msgid "URL"
+msgstr "URL"
+
+msgctxt "field:project.work.component.feature,component:"
+msgid "Component"
+msgstr "Component"
+
+msgctxt "field:project.work.component.feature,date:"
+msgid "Date"
+msgstr "Data"
+
+msgctxt "field:project.work.component.feature,description:"
+msgid "Description"
+msgstr "Descripció"
+
+msgctxt "field:project.work.component.feature,name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:project.work.component,url:"
-msgid "Url"
-msgstr "URL"
+msgctxt "field:project.work.component.feature,version:"
+msgid "Version"
+msgstr "Versió"
 
-msgctxt "field:project.work.component,write_date:"
-msgid "Write Date"
-msgstr "Data modificació"
+msgctxt "field:project.work.component.version,deprecation_date:"
+msgid "Deprecation Date"
+msgstr "Data d'abandonament"
 
-msgctxt "field:project.work.component,write_uid:"
-msgid "Write User"
-msgstr "Usuari modificació"
+msgctxt "field:project.work.component.version,name:"
+msgid "Name"
+msgstr "Nom"
 
-msgctxt "field:project.work.component_category,create_date:"
-msgid "Create Date"
-msgstr "Data creació"
-
-msgctxt "field:project.work.component_category,create_uid:"
-msgid "Create User"
-msgstr "Usuari creació"
-
-msgctxt "field:project.work.component_category,id:"
-msgid "ID"
-msgstr "ID"
+msgctxt "field:project.work.component.version,release_date:"
+msgid "Release Date"
+msgstr "Data de publicació"
 
 msgctxt "field:project.work.component_category,name:"
 msgid "Name"
 msgstr "Nom"
 
-msgctxt "field:project.work.component_category,rec_name:"
-msgid "Name"
-msgstr "Nom"
+msgctxt "model:ir.action,name:act_feature"
+msgid "Features"
+msgstr "Característiques"
 
-msgctxt "field:project.work.component_category,write_date:"
-msgid "Write Date"
-msgstr "Data modificació"
-
-msgctxt "field:project.work.component_category,write_uid:"
-msgid "Write User"
-msgstr "Usuari modificació"
+msgctxt "model:ir.action,name:act_features_from_components"
+msgid "Features"
+msgstr "Característiques"
 
 msgctxt "model:ir.action,name:act_project_work_component"
 msgid "Project Component"
@@ -153,7 +108,11 @@ msgstr "Components"
 
 msgctxt "model:ir.action,name:act_project_work_component_category"
 msgid "Project Component Category"
-msgstr ""
+msgstr "Categoria de components del projecte"
+
+msgctxt "model:ir.action,name:act_version"
+msgid "Versions"
+msgstr "Versions"
 
 msgctxt "model:ir.action,name:act_work_from_component"
 msgid "Tasks"
@@ -162,6 +121,10 @@ msgstr "Tasques"
 msgctxt "model:ir.message,text:msg_name_unique"
 msgid "The name of the component must be unique."
 msgstr "El nom del component ha de ser únic."
+
+msgctxt "model:ir.ui.menu,name:menu_feature"
+msgid "Features"
+msgstr "Característiques"
 
 msgctxt "model:ir.ui.menu,name:menu_project_component"
 msgid "Project Component"
@@ -173,23 +136,35 @@ msgstr "Component"
 
 msgctxt "model:ir.ui.menu,name:menu_project_work_component_category"
 msgid "Component Category"
-msgstr ""
+msgstr "Categoria de components"
+
+msgctxt "model:ir.ui.menu,name:menu_version"
+msgid "Versions"
+msgstr "Versions"
 
 msgctxt "model:project.work-project.work_component,name:"
 msgid "Project Work - Component"
-msgstr ""
+msgstr "Treball per projectes - Component"
 
 msgctxt "model:project.work-project.work_component_category,name:"
 msgid "Project Work - Component Category"
-msgstr ""
+msgstr "Treball per projectes - Categoria de components"
 
 msgctxt "model:project.work.component,name:"
 msgid "Project Component"
 msgstr "Component"
 
+msgctxt "model:project.work.component.feature,name:"
+msgid "Project Component Feature"
+msgstr "Característica dels components del projecte"
+
+msgctxt "model:project.work.component.version,name:"
+msgid "Project Component Version"
+msgstr "Versió del component del projecte"
+
 msgctxt "model:project.work.component_category,name:"
 msgid "Project Component Category"
-msgstr ""
+msgstr "Categoria de components del projecte"
 
 msgctxt "model:res.group,name:group_project_component"
 msgid "Project Component"
@@ -197,7 +172,7 @@ msgstr "Components"
 
 msgctxt "model:res.group,name:group_project_component_admin"
 msgid "Project Component Administration"
-msgstr ""
+msgstr "Administració de components del projecte"
 
 msgctxt "view:project.work.component:"
 msgid "Project Component"
@@ -205,4 +180,4 @@ msgstr "Components projecte"
 
 msgctxt "view:project.work.component_category:"
 msgid "Project Component Category"
-msgstr ""
+msgstr "Categoria de components del projecte"
