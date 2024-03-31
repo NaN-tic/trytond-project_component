@@ -5,4 +5,5 @@
     <field name="version"/>
     <field name="component"/>
     <field name="name"/>
+    <field name="date"/>
 </tree>

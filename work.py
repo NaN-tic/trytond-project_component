@@ -24,6 +24,7 @@ class Feature(ModelSQL, ModelView):
     component = fields.Many2One('project.work.component', 'Component', required=True)
     name = fields.Char('Name', required=True)
     description = fields.Text('Description')
+    date = fields.Date('Date')
 
 
 class ComponentCategory(ModelSQL, ModelView):
