@@ -1,12 +1,9 @@
 # This file is part of Tryton.  The COPYRIGHT file at the top level of
 # this repository contains the full copyright notices and license terms.
-
 from trytond.model import ModelView, ModelSQL, fields, Unique, DeactivableMixin
 from trytond.pool import PoolMeta
 from trytond.pyson import Eval
-
-__all__ = ['Version', 'Component', 'ComponentCategory',
-    'WorkComponentCategory', 'WorkComponent', 'Work']
+from trytond.modules.widgets import tools
 
 
 class Version(ModelSQL, ModelView):
@@ -20,11 +17,21 @@ class Version(ModelSQL, ModelView):
 class Feature(ModelSQL, ModelView):
     'Project Component Feature'
     __name__ = 'project.work.component.feature'
-    version = fields.Many2One('project.work.component.version', 'Version', required=True)
-    component = fields.Many2One('project.work.component', 'Component', required=True)
+    component = fields.Many2One('project.work.component', 'Component',
+        required=True)
+    version = fields.Many2One('project.work.component.version', 'Version',
+        required=True)
+    date = fields.Date('Date')
     name = fields.Char('Name', required=True)
     description = fields.Text('Description')
-    date = fields.Date('Date')
+
+    @classmethod
+    def __register__(cls, module_name):
+        sql_table = cls.__table__()
+        super().__register__(module_name)
+
+        # Migrate description to EditorJS
+        tools.migrate_field(sql_table, sql_table.default_description, 'text')
 
 
 class ComponentCategory(ModelSQL, ModelView):
