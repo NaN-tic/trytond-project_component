@@ -31,7 +31,7 @@ class Feature(ModelSQL, ModelView):
         super().__register__(module_name)
 
         # Migrate description to EditorJS
-        tools.migrate_field(sql_table, sql_table.default_description, 'text')
+        tools.migrate_field(sql_table, sql_table.default, 'text')
 
 
 class ComponentCategory(ModelSQL, ModelView):
