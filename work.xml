@@ -42,14 +42,14 @@
             <field name="act_window" ref="act_project_work_component"/>
         </record>
         <record model="ir.model.access" id="access_project_work_component">
-            <field name="model" search="[('model', '=', 'project.work.component')]"/>
+            <field name="model">project.work.component</field>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_project_work_component_admin">
-            <field name="model" search="[('model', '=', 'project.work.component')]"/>
+            <field name="model">project.work.component</field>
             <field name="group" ref="group_project_component_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
@@ -107,14 +107,14 @@
         </record>
 
         <record model="ir.model.access" id="access_project_work_component_category">
-            <field name="model" search="[('model', '=', 'project.work.component_category')]"/>
+            <field name="model">project.work.component_category</field>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_project_work_component_category_admin">
-            <field name="model" search="[('model', '=', 'project.work.component_category')]"/>
+            <field name="model">project.work.component_category</field>
             <field name="group" ref="group_project_component_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>
