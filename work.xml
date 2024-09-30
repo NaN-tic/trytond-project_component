@@ -132,6 +132,7 @@
             <field name="name">project_work_list</field>
         </record>
 
+        <!-- features -->
         <record model="ir.ui.view" id="project_work_component_feature_view_list">
             <field name="model">project.work.component.feature</field>
             <field name="type">tree</field>
@@ -155,6 +156,17 @@
             <field name="sequence" eval="10"/>
             <field name="view" ref="project_work_component_feature_view_form"/>
             <field name="act_window" ref="act_feature"/>
+        </record>
+
+        <record model="ir.ui.view" id="project_work_component_feature_import_start_view_form">
+            <field name="model">project.work.component.feature.import.start</field>
+            <field name="type">form</field>
+            <field name="name">project_work_component_feature_import_start_form</field>
+        </record>
+
+        <record model="ir.action.wizard" id="wizard_feature_import">
+            <field name="name">Import Features</field>
+            <field name="wiz_name">project.work.component.feature.import</field>
         </record>
 
         <!-- Relates -->
@@ -197,6 +209,7 @@
 
         <menuitem action="act_version" id="menu_version" parent="menu_project_component" sequence="2"/>
         <menuitem action="act_feature" id="menu_feature" parent="menu_project_component" sequence="2"/>
+        <menuitem action="wizard_feature_import" id="menu_feature_import" parent="menu_feature" sequence="2"/>
         <menuitem action="act_project_work_component" id="menu_project_work_component" parent="menu_project_component" sequence="1" name="Component"/>
         <menuitem action="act_project_work_component_category" id="menu_project_work_component_category" parent="menu_project_component" sequence="1" name="Component Category"/>
     </data>
