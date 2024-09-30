@@ -1,17 +1,6 @@
 #
-# Albert Cervera i Areny <albert@nan-tic.com>, 2024.
 msgid ""
-msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-"Last-Translator: Albert Cervera i Areny <albert@nan-tic.com>\n"
-"PO-Revision-Date: 2024-03-31 12:15+0200\n"
-"Project-Id-Version: \n"
-"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
-"Language: ca_ES\n"
-"Content-Transfer-Encoding: 8bit\n"
-"MIME-Version: 1.0\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+msgstr "Content-Type: text/plain; charset=utf-8\n"
 
 msgctxt "field:project.work,component_categories:"
 msgid "Component Category"
@@ -78,6 +67,18 @@ msgctxt "field:project.work.component.feature,version:"
 msgid "Version"
 msgstr "Versió"
 
+msgctxt "field:project.work.component.feature.import.start,component:"
+msgid "Component"
+msgstr "Component"
+
+msgctxt "field:project.work.component.feature.import.start,file_:"
+msgid "File"
+msgstr "Fitxer"
+
+msgctxt "field:project.work.component.feature.import.start,version:"
+msgid "Version"
+msgstr "Versió"
+
 msgctxt "field:project.work.component.version,deprecation_date:"
 msgid "Deprecation Date"
 msgstr "Data d'abandonament"
@@ -93,6 +94,10 @@ msgstr "Data de publicació"
 msgctxt "field:project.work.component_category,name:"
 msgid "Name"
 msgstr "Nom"
+
+msgctxt "help:project.work.component.feature.import.start,component:"
+msgid "Default componet to assign all new features"
+msgstr "Component per defecte per assignar les noves funcionalitats"
 
 msgctxt "model:ir.action,name:act_feature"
 msgid "Features"
@@ -118,6 +123,10 @@ msgctxt "model:ir.action,name:act_work_from_component"
 msgid "Tasks"
 msgstr "Tasques"
 
+msgctxt "model:ir.action,name:wizard_feature_import"
+msgid "Import Features"
+msgstr "Importa funcionalitats"
+
 msgctxt "model:ir.message,text:msg_name_unique"
 msgid "The name of the component must be unique."
 msgstr "El nom del component ha de ser únic."
@@ -125,6 +134,10 @@ msgstr "El nom del component ha de ser únic."
 msgctxt "model:ir.ui.menu,name:menu_feature"
 msgid "Features"
 msgstr "Característiques"
+
+msgctxt "model:ir.ui.menu,name:menu_feature_import"
+msgid "Import Features"
+msgstr "Importa funcionalitats"
 
 msgctxt "model:ir.ui.menu,name:menu_project_component"
 msgid "Project Component"
@@ -158,6 +171,10 @@ msgctxt "model:project.work.component.feature,name:"
 msgid "Project Component Feature"
 msgstr "Característica dels components del projecte"
 
+msgctxt "model:project.work.component.feature.import.start,name:"
+msgid "Feature Import Start"
+msgstr "Inici importació funcionalitats"
+
 msgctxt "model:project.work.component.version,name:"
 msgid "Project Component Version"
 msgstr "Versió del component del projecte"
@@ -181,3 +198,11 @@ msgstr "Components projecte"
 msgctxt "view:project.work.component_category:"
 msgid "Project Component Category"
 msgstr "Categoria de components del projecte"
+
+msgctxt "wizard_button:project.work.component.feature.import,start,end:"
+msgid "Cancel"
+msgstr "Cancel·la"
+
+msgctxt "wizard_button:project.work.component.feature.import,start,import_:"
+msgid "Import"
+msgstr "Importa"

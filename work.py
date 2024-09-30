@@ -1,7 +1,9 @@
 # This file is part of Tryton.  The COPYRIGHT file at the top level of
 # this repository contains the full copyright notices and license terms.
+from collections import defaultdict
 from trytond.model import ModelView, ModelSQL, fields, Unique, DeactivableMixin
-from trytond.pool import PoolMeta
+from trytond.wizard import Button, StateAction, StateView, Wizard
+from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Eval
 from trytond.modules.widgets import tools
 
@@ -12,6 +14,14 @@ class Version(ModelSQL, ModelView):
     name = fields.Char('Name', required=True)
     release_date = fields.Date('Release Date')
     deprecation_date = fields.Date('Deprecation Date')
+
+    @classmethod
+    def __setup__(cls):
+        super().__setup__()
+        cls._order = [
+            ('name', 'DESC'),
+            ('id', 'DESC'),
+            ]
 
 
 class Feature(ModelSQL, ModelView):
@@ -32,6 +42,65 @@ class Feature(ModelSQL, ModelView):
 
         # Migrate description to EditorJS
         tools.migrate_field(sql_table, sql_table.description, 'text')
+
+
+class FeatureImportStart(ModelView):
+    "Feature Import Start"
+    __name__ = 'project.work.component.feature.import.start'
+    file_ = fields.Binary("File", required=True)
+    version = fields.Many2One('project.work.component.version', 'Version',
+        required=True)
+    component = fields.Many2One('project.work.component', 'Component',
+        required=True, help='Default componet to assign all new features')
+
+
+class FeatureImport(Wizard):
+    "Feature Import"
+    __name__ = 'project.work.component.feature.import'
+    start = StateView('project.work.component.feature.import.start',
+        'project_component.project_work_component_feature_import_start_view_form', [
+            Button("Cancel", 'end', 'tryton-cancel'),
+            Button("Import", 'import_', 'tryton-ok', default=True),
+            ])
+    import_ = StateAction('project_component.act_feature')
+
+    def do_import_(self, action):
+        pool = Pool()
+        Feature = pool.get('project.work.component.feature')
+
+        if not self.start.file_:
+            return 'end'
+
+        result = defaultdict(str)
+        current_title = None
+        version = self.start.version
+        component = self.start.component
+        content = self.start.file_.decode('utf-8')
+
+        for line in content.splitlines():
+            if line == '':
+                continue
+            elif line.startswith('###'):
+                current_title = line.replace('### ', '').strip()
+            elif current_title:
+                result[current_title] += line.strip() + "\n"
+
+        features = []
+        for key, value in result.items():
+            feature = Feature()
+            feature.name = key
+            feature.version = version
+            feature.component = component
+            feature.date = None
+            feature.description = tools.text_to_js(value)
+            features.append(feature)
+
+        Feature.save(features)
+        data = {'res_id': [c.id for c in features]}
+
+        if len(features) == 1:
+            action['views'].reverse()
+        return action, data
 
 
 class ComponentCategory(ModelSQL, ModelView):
