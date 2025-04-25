@@ -92,7 +92,7 @@ class FeatureImport(Wizard):
             feature.version = version
             feature.component = component
             feature.date = None
-            feature.description = tools.text_to_js(value)
+            feature.description = value
             features.append(feature)
 
         Feature.save(features)
