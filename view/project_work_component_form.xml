@@ -6,7 +6,7 @@
     <field name="name"/>
     <label name="category"/>
     <field name="category"/>
-    <group id="checkboxes" colspan="2" col="-1">
+    <group id="checkboxes" colspan="3" col="-1">
         <label name="active"/>
         <field name="active"/>
     </group>
