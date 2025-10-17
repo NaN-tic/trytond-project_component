@@ -126,7 +126,7 @@ class Component(DeactivableMixin, ModelSQL, ModelView):
         super(Component, cls).__setup__()
         t = cls.__table__()
         cls._sql_constraints += [
-            ('name_uniq', Unique(t, t.name), 'project_component.msg_name_unique')
+            ('name_uniq', Unique(t, t.name, t.parent), 'project_component.msg_name_unique')
         ]
 
     @classmethod
