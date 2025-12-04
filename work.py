@@ -5,7 +5,6 @@ from trytond.model import ModelView, ModelSQL, fields, Unique, DeactivableMixin
 from trytond.wizard import Button, StateAction, StateView, Wizard
 from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Eval
-from trytond.modules.widgets import tools
 
 
 class Version(ModelSQL, ModelView):
@@ -34,14 +33,6 @@ class Feature(ModelSQL, ModelView):
     date = fields.Date('Date')
     name = fields.Char('Name', required=True)
     description = fields.Text('Description')
-
-    @classmethod
-    def __register__(cls, module_name):
-        sql_table = cls.__table__()
-        super().__register__(module_name)
-
-        # Migrate description to EditorJS
-        tools.migrate_field(sql_table, sql_table.description, 'text')
 
 
 class FeatureImportStart(ModelView):
