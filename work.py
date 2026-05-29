@@ -1,7 +1,7 @@
 # This file is part of Tryton.  The COPYRIGHT file at the top level of
 # this repository contains the full copyright notices and license terms.
 from collections import defaultdict
-from trytond.model import ModelView, ModelSQL, fields, Unique, DeactivableMixin
+from trytond.model import ModelView, ModelSQL, fields, DeactivableMixin
 from trytond.wizard import Button, StateAction, StateView, Wizard
 from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Eval
@@ -113,12 +113,12 @@ class Component(DeactivableMixin, ModelSQL, ModelView):
     comment = fields.Text('Comment')
 
     @classmethod
-    def __setup__(cls):
-        super(Component, cls).__setup__()
-        t = cls.__table__()
-        cls._sql_constraints += [
-            ('name_uniq', Unique(t, t.name), 'project_component.msg_name_unique')
-        ]
+    def __register__(cls, module_name):
+        super().__register__(module_name)
+        table = cls.__table_handler__(module_name)
+
+        # Migration from 8.0: remove unique constraint on component name.
+        table.drop_constraint('name_uniq')
 
     @classmethod
     def copy(cls, components, default=None):
