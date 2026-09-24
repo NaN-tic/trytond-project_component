@@ -6,16 +6,8 @@
         <record model="res.group" id="group_project_component_admin">
             <field name="name">Project Component Administration</field>
         </record>
-        <record model="res.user-res.group" id="user_admin_group_project_component_admin">
-            <field name="user" ref="res.user_admin"/>
-            <field name="group" ref="group_project_component_admin"/>
-        </record>
         <record model="res.group" id="group_project_component">
             <field name="name">Project Component</field>
-        </record>
-        <record model="res.user-res.group" id="user_admin_group_project_component">
-            <field name="user" ref="res.user_admin"/>
-            <field name="group" ref="group_project_component"/>
         </record>
         <record model="ir.ui.view" id="project_work_component_view_form">
             <field name="model">project.work.component</field>
