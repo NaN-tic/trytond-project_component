@@ -205,4 +205,10 @@
         <menuitem action="act_project_work_component" id="menu_project_work_component" parent="menu_project_component" sequence="1" name="Component"/>
         <menuitem action="act_project_work_component_category" id="menu_project_work_component_category" parent="menu_project_component" sequence="1" name="Component Category"/>
     </data>
+    <data>
+        <record model="ir.action-res.group" id="feature_import_group_project_component">
+            <field name="action" ref="wizard_feature_import"/>
+            <field name="group" ref="group_project_component"/>
+        </record>
+    </data>
 </tryton>
